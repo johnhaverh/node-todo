@@ -1,21 +1,36 @@
 require('colors');
 
-
 const { inquirerMenu, pausa } = require('./helpers/inquirer');
-// const { mostrarMenu, pausa } = require('./helpers/mensajes');
+const Tareas = require('./models/tareas');
 
-console.clear();
 
 const main = async () => {
 
-    let opt=';'
+    let opt='';
+
     do {
-    //    opt = await mostrarMenu();
-    opt = await inquirerMenu();
-    //    if (opt !== '0' ) 
-    await  pausa();
+        opt = await inquirerMenu();
+        //console.log(tareas);
+        await  pausa();
     } while (opt != '0');
 
 }
 
 main ();
+
+
+/*
+
+// const { mostrarMenu, pausa } = require('./helpers/mensajes');
+
+// console.clear();
+
+    //    opt = await mostrarMenu();
+    
+    
+    //    if (opt !== '0' ) 
+
+    // const tareas = new Tareas();
+    // const tarea = new Tarea('Comprar comida');
+    // tareas._listado[tarea.id] = tarea;
+ */
